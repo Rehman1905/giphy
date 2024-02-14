@@ -12,7 +12,7 @@ document.querySelector('#add').addEventListener('click', function (e) {
         divBtn.append(btn)
         btn.textContent = input.value
         btn.append(clear)
-        clear.style.display = 'block'
+        clear.style.display = 'none'
         btn.addEventListener('mouseover', function () {
             btn.style.height = '45px'
             clear.style.display = 'block'
