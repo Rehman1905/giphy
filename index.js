@@ -7,7 +7,7 @@ document.querySelector('#add').addEventListener('click', function (e) {
         const btn = document.createElement('button')
         const clear = document.createElement('button')
         clear.id = 'clear'
-        clear.textContent = 'X'
+        clear.textContent='X'
         btn.classList.add('btn')
         divBtn.append(btn)
         btn.textContent = input.value
@@ -70,12 +70,6 @@ function melumatGel() {
 
                     p.innerHTML = `Rating:${result.data[i].rating}`;
                     img.src = result.data[i].images.fixed_height_downsampled.url;
-
-                    img.addEventListener('click', function () {
-                        console.log('a');
-                    });
-
-                    img.id = 'gif';
 
                     imgContainer.classList.add('img-container');
                     imgContainer.append(p, img);
