@@ -69,13 +69,20 @@ function melumatGel() {
                     const imgContainer = document.createElement('div');
 
                     p.innerHTML = `Rating:${result.data[i].rating}`;
-                    img.src = result.data[i].images.fixed_height_downsampled.url;
-
+                    img.src = `https://media1.giphy.com/media/${result.data[i].id}/giphy_s.gif`
+                    img.addEventListener('click',function(e){
+                        e.preventDefault()
+                        if(img.src==`https://media1.giphy.com/media/${result.data[i].id}/giphy_s.gif`){
+                            img.src = `https://media1.giphy.com/media/${result.data[i].id}/giphy.gif`
+                            console.log('alma')
+                        }else{
+                            img.src = `https://media1.giphy.com/media/${result.data[i].id}/giphy_s.gif`
+                        }
+                    })
                     imgContainer.classList.add('img-container');
                     imgContainer.append(p, img);
-
                     div3.append(imgContainer);
-
+                    
                 }
 
             }
